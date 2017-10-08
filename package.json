@@ -1,0 +1,17 @@
+{
+  "name": "react-native-art-wave",
+  "version": "1.0.0",
+  "description": "Use Art to draw waves",
+  "main": "artTest.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "jellyCao",
+  "license": "ISC",
+  "keywords": [
+    "react-native",
+    "react-native-art-wave",
+    "art",
+    "wave"
+  ]
+}
