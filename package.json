@@ -1,6 +1,6 @@
 {
   "name": "react-native-art-wave",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "Use Art to draw waves",
   "main": "artTest.js",
   "scripts": {

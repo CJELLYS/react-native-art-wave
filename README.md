@@ -12,6 +12,13 @@ npm install react-native-art-wave
 
 <img src="https://github.com/CJELLYS/image/blob/master/iosWave.gif" width="300" />
 
+## Add dependency
+Android includes the ART library by default, and IOS needs to add dependencies separately.
+
+1.Right click on the project -> 'Add Files to ProjectName -> select node_modules / react-native / React / Libraries / ART / ART.xcodeproj'
+
+2.Add libART.a to Linked Frameworks and Libraries
+
 ## Usage
 
 ```
