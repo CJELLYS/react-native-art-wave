@@ -60,7 +60,7 @@ export class ArtTest extends Component {
         moveY: this.moveY
       })
       if (this.moveY < (this.surfaceHeigth * (1 - this.proportion))) {
-        clearTimeout(this.moveXTimer);
+        clearInterval(this.moveXTimer);
       }
     }, 100);
   }
