@@ -32,7 +32,6 @@ export class ArtTest extends Component {
   }
 
   componentDidMount() {
-
     var addBool = false;
     this.intervalTimer = setInterval(() => {//Arc control
       if (addBool === true) {
@@ -46,7 +45,6 @@ export class ArtTest extends Component {
           radian: this.copyRadian
         });
       }
-
       if (this.copyRadian > 0.7) {
         addBool = false;
       } else if (this.copyRadian < 0.3) {
@@ -60,11 +58,15 @@ export class ArtTest extends Component {
         moveY: this.moveY
       })
       if (this.moveY < (this.surfaceHeigth * (1 - this.proportion))) {
-        clearInterval(this.moveXTimer);
+        this.moveXTimer && clearInterval(this.moveXTimer);
       }
     }, 100);
   }
 
+  componentWillUnmount() {
+    this.intervalTimer && clearTimeout(this.intervalTimer);
+    this.moveXTimer && clearTimeout(this.moveXTimer);
+  }
 
   artDarwRecWaveView() {
     // line1
@@ -141,9 +143,9 @@ export class ArtTest extends Component {
 
   typeView() {
     if (this.props.type === 'circular') {
-     return this.artDarwCircularWaveView()
+      return this.artDarwCircularWaveView()
     } else if (this.props.type === 'rectangular') {
-     return this.artDarwRecWaveView()
+      return this.artDarwRecWaveView()
     }
   }
 
